@@ -11,6 +11,7 @@ function ContactForm() {
   });
   const [statusMessage, setStatusMessage] = useState('');
   const [isMessageVisible, setIsMessageVisible] = useState(false);
+  const [buttonText, setButtonText] = useState('Pošalji'); // State za tekst gumba
   const form = useRef();
 
   const handleChange = (e) => {
@@ -23,11 +24,13 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setButtonText('Šalje se...'); // Opcionalno dok šalje
 
     emailjs.sendForm('service_agm', 'template_hcre1xf', form.current, 'HD2zlLyAop9U0owzd')
       .then((result) => {
         setStatusMessage('Vaša poruka je uspješno poslana!');
         setIsMessageVisible(true);
+        setButtonText('Poslano!'); // Promjena teksta gumba
         setFormData({
           user_name: '',
           user_email: '',
@@ -38,6 +41,7 @@ function ContactForm() {
       .catch((error) => {
         setStatusMessage('Došlo je do pogreške pri slanju poruke. Pokušajte ponovno.');
         setIsMessageVisible(true);
+        setButtonText('Pošalji'); // Vrati tekst gumba ako je greška
         console.error('Greška pri slanju e-maila:', error);
       });
   };
@@ -46,14 +50,14 @@ function ContactForm() {
     if (isMessageVisible) {
       const timer = setTimeout(() => {
         setIsMessageVisible(false);
-      }, 5000); // Poruka će nestati nakon 5 sekundi
-      return () => clearTimeout(timer); // Očistite tajmer pri demontaži komponente
+        setButtonText('Pošalji'); // Vrati tekst gumba nakon 5 sekundi
+      }, 5000);
+      return () => clearTimeout(timer);
     }
   }, [isMessageVisible]);
 
   return (
     <div>
-      {isMessageVisible && <p>{statusMessage}</p>}
       <form ref={form} onSubmit={handleSubmit} className="contact-form">
         <div className="form-group">
           <label htmlFor="user_name">Ime i prezime:</label>
@@ -98,7 +102,8 @@ function ContactForm() {
             required
           />
         </div>
-        <button type="submit">Pošalji</button>
+        {isMessageVisible && <p>{statusMessage}</p>}
+        <button type="submit">{buttonText}</button>
       </form>
     </div>
   );
