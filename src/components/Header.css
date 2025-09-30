@@ -1,15 +1,11 @@
 .app-title {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #121212; /* Odabrana tamna nijansa */
-  color: white; /* Osigurava čitljivost teksta na tamnoj pozadini */
-  padding: 10px 0;
-  margin: 0;
-  text-align: center;
+  padding: 0.3em 0.6em; /* da ima prostora oko teksta */
+  border-radius: 6px;   /* malo zaobljeni rubovi */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-
 .app-title:hover {
-  background-color: #121212d6; 
+  background-color: #121212d6;
+  color: #ffffff; /* da tekst ostane čitljiv na tamnoj pozadini */
 }
