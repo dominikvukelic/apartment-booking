@@ -15,7 +15,7 @@
   display: flex;
   justify-content: center; /* Horizontalno centriranje */
   align-items: center;     /* Vertikalno centriranje */
-  height: 100vh;           /* Visina kontejnera jednaka visini prozora */
+  padding-bottom: 15px;
 }
 
 .swiper-button-prev,
