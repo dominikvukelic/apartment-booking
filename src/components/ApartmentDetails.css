@@ -1,0 +1,63 @@
+.apartment-details {
+  margin: 20px;
+}
+
+.apartment-details h2 {
+  text-align: center;
+  color: #008080; /* Teal color */
+}
+
+.section {
+  margin: 10px 0;
+}
+
+.section h3 {
+  color: #005757; /* Darker teal color */
+}
+
+.details-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.details-content li {
+  margin-bottom: 10px;
+}
+
+.details-content li:last-child {
+  margin-bottom: 0; /* Uklanja donji razmak za posljednju stavku */
+}
+
+
+/* Accordion styles */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion-button {
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.accordion-button:hover {
+  background-color: #ddd;
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+}
+
+.accordion-button:focus + .accordion-content,
+.accordion-button:active + .accordion-content {
+  max-height: 500px; /* Prilagodite vrijednost prema visini sadržaja */
+}

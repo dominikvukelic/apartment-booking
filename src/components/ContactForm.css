@@ -1,0 +1,83 @@
+/* src/App.css */
+.app-container {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  .app-title {
+    text-align: center;
+  }
+  
+  h2 {
+    cursor: pointer;
+    color: #007bff;
+  }
+  
+  .contact-form {
+    margin: 20px 0;
+  }
+
+  .contact-form input,
+.contact-form textarea {
+  margin-bottom: 10px;
+  line-height: 1.5;;
+}
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-top: 5px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .status-message {
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    transition: opacity 1s ease-out;
+  }
+
