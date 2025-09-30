@@ -1,0 +1,20 @@
+.location-section {
+  max-width: 800px;       /* isto kao i carousel, možeš mijenjati */
+  margin: 0 auto;          /* centriranje sekcije horizontalno */
+  padding: 20px;           /* malo razmaka od rubova */
+  box-sizing: border-box;  /* da padding ne povećava širinu */
+}
+
+.location-section h2 {
+  cursor: pointer;
+  color: #007bff;
+  margin-bottom: 15px;     /* razmak između naslova i iframe-a */
+  text-align: center;
+}
+
+.location-section iframe {
+  width: 100%;           /* koristi cijelu širinu sekcije, ne cijelog ekrana */
+  height: 450px;         /* visina iframe-a */
+  border: 0;
+  display: block;
+}
