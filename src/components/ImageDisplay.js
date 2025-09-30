@@ -12,7 +12,6 @@ const ImageDisplay = () => {
     'apartment-2.jpg',
     'apartment-3.jpg',
     'apartment-4.jpg',
-    // Dodajte ovdje ostale slike
   ];
 
   return (

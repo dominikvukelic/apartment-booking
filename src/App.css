@@ -1,8 +1,17 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;   /* makni default marginu body-ja */
+  padding: 0;
+}
 
 .app-container {
-  background-color: #f5f5f5; /* Nježna nijansa bijele */
-  color: #008080; /* Teal boja za tekst */
+  min-height: 100vh; /* cijela visina */
+  width: 100%;       /* cijela širina */
+  background-color: #f5f5f5;
+  color: #008080;
   font-family: Arial, sans-serif;
   padding: 20px;
   text-align: center;
+  box-sizing: border-box;
 }
