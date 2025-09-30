@@ -102,7 +102,7 @@ function ContactForm() {
             required
           />
         </div>
-        {isMessageVisible && <p>{statusMessage}</p>}
+        {isMessageVisible && <p className="status-message">{statusMessage}</p>}
         <button type="submit">{buttonText}</button>
       </form>
     </div>

@@ -76,7 +76,7 @@
     margin-top: 20px;
     background-color: #4CAF50;
     color: white;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
     transition: opacity 1s ease-out;
   }
